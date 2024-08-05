@@ -1,33 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
+import './App.css'
+import {Button} from "@mui/material"
+import SendIcon from "@mui/icons-material/Send"
+import DeleteIcon from "@mui/icons-material/Delete"
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <h1>Hello its MUI with React</h1>
+    {/* simple button */}
+    <Button variant="contained" color='primary' size='small' >click Me 1</Button>
+    <Button variant="outlined" color='primary'  size='small'>click Me 1</Button>
+    <br></br>
+    <br></br>
+
+    <Button variant="outlined" color='success' size='medium' >click Me 1</Button>
+    <Button variant="contained" color='success'size='medium' >click Me 1</Button>
+    <br></br>
+    <br></br>
+    <Button variant="outlined" color='error'  size='large'>error</Button>
+    <Button variant="contained" color='error' size='large'>error</Button>
+    <br></br>
+    <br></br>
+    {/* borderd button */}
+    <Button color='secondary' variant="outlined" size='small'>click me 2 </Button>
+    <Button variant="contained" color='secondary' >click Me 2</Button>
+    <br></br>
+    <br></br>
+    {/* text button */}
+    <Button variant='text'> text button</Button>
+    <br></br>
+    <br></br>
+    {/* contained Button */}
+    <Button variant='contained'>contained Button</Button>
+    <br></br>
+    <br></br>
+    {/* outlined button */}
+    <Button variant='outlined'>outlined button</Button>
+    <br></br>
+    <br></br>
+    {/* link button */}
+    <Button href='#text-buttons'>Link</Button>
+    <br></br>
+    <br></br>
+    {/* button icons */}
+    <Button variant='outlined' startIcon={<SendIcon/>}>send</Button>
+    <Button variant="contained" endIcon={<DeleteIcon/>}>Delete</Button>
     </>
   )
 }
