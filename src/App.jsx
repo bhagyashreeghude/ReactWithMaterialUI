@@ -1,9 +1,14 @@
 import "./App.css";
-import { Button, IconButton ,Stack} from "@mui/material";
+import { Button, IconButton, Stack } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import AlarmIcon from "@mui/icons-material/Alarm"
+import AlarmIcon from "@mui/icons-material/Alarm";
+import Fingerprint from "@mui/icons-material/Fingerprint";
+import CloudUploadIcon from "@mui/icons-material/CloudUpload";
+// import LoadingButton from "@mui/icons-material/LoadingButton";
+import Buttons from "./components/Buttons";
+
 function App() {
   return (
     <>
@@ -70,23 +75,45 @@ function App() {
       </div>
       {/* button icons */}
 
-      
-        <Stack direction="row" spacing={6}>
-          <IconButton aria-label="delete" size="small">
-            <DeleteIcon  fontSize="small"/>
-          </IconButton>
-          <IconButton aria-label="delete" size="medium">
-            <DeleteIcon  fontSize="inherit"/>
-          </IconButton>
-          <IconButton aria-label="add to shopping cart" size="large">
-            <AddShoppingCartIcon fontSize="inherit" />
-          </IconButton>
-          <IconButton aria-label="alarm" size="large">
-            <AlarmIcon fontSize="large"/>
-          </IconButton>
+      <Stack direction="row" spacing={6}>
+        <IconButton aria-label="delete" size="small">
+          <DeleteIcon fontSize="small" />
+        </IconButton>
+        <IconButton aria-label="delete" size="medium">
+          <DeleteIcon fontSize="inherit" />
+        </IconButton>
+        <IconButton aria-label="add to shopping cart" size="large">
+          <AddShoppingCartIcon fontSize="inherit" />
+        </IconButton>
+        <IconButton aria-label="alarm" size="large">
+          <AlarmIcon fontSize="large" />
+        </IconButton>
 
-        </Stack>
-      
+        <IconButton color="primary">
+          <Fingerprint />
+        </IconButton>
+        <IconButton color="secondary">
+          <Fingerprint />
+        </IconButton>
+
+        <IconButton color="success">
+          <Fingerprint />
+        </IconButton>
+        <Button
+          component="label"
+          role="undefined"
+          variant="contained"
+          tabIndex={-2}
+          startIcon={<CloudUploadIcon />}
+        >
+          upload file{" "}
+        </Button>
+      </Stack>
+      {/* loading button */}
+      <br></br>
+      <br></br>
+     
+      <Buttons/>
     </>
   );
 }

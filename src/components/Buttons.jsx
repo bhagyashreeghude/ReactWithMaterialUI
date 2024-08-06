@@ -1,24 +1,37 @@
-import { Stack } from "@mui/material"
-import IconButton from "@mui/material"
-import DeleteIcon from "@mui/icons-material/Delete"
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart"
-
+import LoadingButton from "@mui/lab/LoadingButton";
+import { Stack } from "@mui/material";
+import SaveIcon from "@mui/icons-material/Save"
 const Buttons = () => {
   return (
-    <div>
-        <Stack direction="row" spacing={2}>
-          <IconButton aria-label="delete">
-            <DeleteIcon />
-          </IconButton>
-          <IconButton aria-label="delete">
-            <DeleteIcon />
-          </IconButton>
-          <IconButton aria-label="add to shopping cart">
-            <AddShoppingCartIcon />
-          </IconButton>
-        </Stack>
-    </div>
-  )
-}
+    <Stack direction="row" spacing={5}>
+      <LoadingButton loading variant="outlined">
+        submit
+      </LoadingButton>
+      <LoadingButton loading loadingIndicator="loading..123" variant="outlined">
+        fetch data
+      </LoadingButton>
+      <LoadingButton 
+      loading variant="outlined"
+      loadingPosition="start"
+      startIcon={<SaveIcon/>}>
+        save
+      </LoadingButton>
 
-export default Buttons
+      <LoadingButton 
+      loading variant="outlined"
+      loadingPosition=""
+      startIcon={<SaveIcon/>}>
+        save
+      </LoadingButton>
+      <LoadingButton 
+      loading variant="outlined"
+      loadingPosition="end"
+      startIcon={<SaveIcon/>}>
+        save
+      </LoadingButton>
+      
+    </Stack>
+  );
+};
+
+export default Buttons;
