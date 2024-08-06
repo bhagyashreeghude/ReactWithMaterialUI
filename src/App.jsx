@@ -71,18 +71,18 @@ function App() {
       {/* button icons */}
 
       
-        <Stack direction="row" spacing={2}>
-          <IconButton aria-label="delete">
-            <DeleteIcon />
+        <Stack direction="row" spacing={6}>
+          <IconButton aria-label="delete" size="small">
+            <DeleteIcon  fontSize="small"/>
           </IconButton>
-          <IconButton aria-label="delete">
-            <DeleteIcon />
+          <IconButton aria-label="delete" size="medium">
+            <DeleteIcon  fontSize="inherit"/>
           </IconButton>
-          <IconButton aria-label="add to shopping cart">
-            <AddShoppingCartIcon />
+          <IconButton aria-label="add to shopping cart" size="large">
+            <AddShoppingCartIcon fontSize="inherit" />
           </IconButton>
-          <IconButton aria-label="alarm">
-            <AlarmIcon />
+          <IconButton aria-label="alarm" size="large">
+            <AlarmIcon fontSize="large"/>
           </IconButton>
 
         </Stack>
